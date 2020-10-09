@@ -1,3 +1,4 @@
+#se indica la imagen (esta es obteneida de docker hub en este caso) y la version
 FROM node:14.5.0-alpine3.12
 #voy a crear una carpeta, en esta carpeta voy a instalar mis dependenicias
 #la carpeta /home/node/app va ser propiedad del usuario node
