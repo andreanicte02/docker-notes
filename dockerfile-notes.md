@@ -1,3 +1,7 @@
+Estructura basica de un docker file
+
+
+
 1. define una variable que el usuario puede pasar en tiempo de ejecución es la única instrucción que puede ir antes del from
 
 ```
