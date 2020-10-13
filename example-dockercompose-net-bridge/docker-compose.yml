@@ -1,0 +1,21 @@
+version: "3.1"
+
+services:
+    node-express:
+        image: node-express
+
+        networks: 
+            - node-app-express
+    
+    nginx:
+        image: nginx
+        ports: 
+            - 80:80
+        networks: 
+            - node-app-express
+        volumes: 
+            - ./nginx.conf:/etc/nginx/conf.d/default.conf
+        
+networks: 
+    node-app-express:
+        driver: bridge
