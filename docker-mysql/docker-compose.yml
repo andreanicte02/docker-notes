@@ -1,0 +1,26 @@
+# Use root/example as user/password credentials
+     
+version: '3'
+
+services:
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    
+      #la carpeta del contenedor que quiero que persisita
+      #maquina local, carpeta del contenedor
+      ##en donde se guarda mi informacion en la maquina local
+ 
+    volumes: 
+      - /tmp/data:/var/lib/mysql
+
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

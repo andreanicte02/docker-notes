@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+    node-app2:
+        image: node-app
+        ports: 
+            - 8181:8080
+    
